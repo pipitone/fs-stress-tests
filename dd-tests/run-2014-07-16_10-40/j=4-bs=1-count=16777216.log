@@ -1,0 +1,54 @@
+$ ../read-write-test 
+# ------------------------------------------------------
+# recording baseline activity - Wed Jul 16 10:42:39 EDT 2014 - j=4-bs=1-count=16777216
+# begin write tests... 4 parallel streams - Wed Jul 16 10:43:04 EDT 2014 - j=4-bs=1-count=16777216
+2       16777216+0 records in
+2       16777216+0 records out
+2       17179869184 bytes (17 GB) copied, 271.298 s, 63.3 MB/s
+4       16777216+0 records in
+4       16777216+0 records out
+4       17179869184 bytes (17 GB) copied, 281.889 s, 60.9 MB/s
+3       16777216+0 records in
+3       16777216+0 records out
+3       17179869184 bytes (17 GB) copied, 286.572 s, 59.9 MB/s
+1       16777216+0 records in
+1       16777216+0 records out
+1       17179869184 bytes (17 GB) copied, 288.289 s, 59.6 MB/s
+# begin read tests... 4 parallel streams - Wed Jul 16 10:47:53 EDT 2014 - j=4-bs=1-count=16777216
+2       16777216+0 records in
+2       16777216+0 records out
+2       17179869184 bytes (17 GB) copied, 144.483 s, 119 MB/s
+1       16777216+0 records in
+1       16777216+0 records out
+1       17179869184 bytes (17 GB) copied, 145.594 s, 118 MB/s
+3       16777216+0 records in
+3       16777216+0 records out
+3       17179869184 bytes (17 GB) copied, 146.308 s, 117 MB/s
+4       16777216+0 records in
+4       16777216+0 records out
+4       17179869184 bytes (17 GB) copied, 146.712 s, 117 MB/s
+# read/write tests... 4 parallel streams each - Wed Jul 16 10:50:20 EDT 2014 - j=4-bs=1-count=16777216
+2 write 16777216+0 records in
+2 write 16777216+0 records out
+2 write 17179869184 bytes (17 GB) copied, 303.348 s, 56.6 MB/s
+4 write 16777216+0 records in
+4 write 16777216+0 records out
+4 write 17179869184 bytes (17 GB) copied, 303.443 s, 56.6 MB/s
+1 write 16777216+0 records in
+1 write 16777216+0 records out
+1 write 17179869184 bytes (17 GB) copied, 304.47 s, 56.4 MB/s
+3 write 16777216+0 records in
+3 write 16777216+0 records out
+3 write 17179869184 bytes (17 GB) copied, 305.965 s, 56.1 MB/s
+2 read  16777216+0 records in
+2 read  16777216+0 records out
+2 read  17179869184 bytes (17 GB) copied, 379.612 s, 45.3 MB/s
+4 read  16777216+0 records in
+4 read  16777216+0 records out
+4 read  17179869184 bytes (17 GB) copied, 382.694 s, 44.9 MB/s
+1 read  16777216+0 records in
+1 read  16777216+0 records out
+1 read  17179869184 bytes (17 GB) copied, 385.006 s, 44.6 MB/s
+3 read  16777216+0 records in
+3 read  16777216+0 records out
+3 read  17179869184 bytes (17 GB) copied, 384.963 s, 44.6 MB/s

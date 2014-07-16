@@ -1,0 +1,186 @@
+               capacity     operations    bandwidth
+pool        alloc   free   read  write   read  write
+----------  -----  -----  -----  -----  -----  -----
+local        245G  33.1G      1     20  16.9K   227K
+  sdd        245G  33.1G      1     20  16.9K   227K
+logs            -      -      -      -      -      -
+  mirror     256K  14.6G      0      0      0      0
+    sdr         -      -      0      0      6      3
+    sds         -      -      0      0      6      3
+cache           -      -      -      -      -      -
+  sde       1.39G   277G      2      0  4.27K  17.7K
+----------  -----  -----  -----  -----  -----  -----
+tank        20.5T  1.30T    525    160  55.3M  13.7M
+  raidz2    10.2T   665G    262     80  27.7M  6.86M
+    sdf         -      -    154     23  4.49M  1.72M
+    sdg         -      -    166     23  4.89M  1.72M
+    sdh         -      -    161     24  4.62M  1.72M
+    sdi         -      -    155     23  4.39M  1.72M
+    sdj         -      -    166     23  4.81M  1.72M
+    sdk         -      -    160     24  4.65M  1.72M
+  raidz2    10.2T   664G    262     80  27.7M  6.86M
+    sdl         -      -    160     24  4.53M  1.72M
+    sdm         -      -    157     24  4.44M  1.72M
+    sdn         -      -    169     24  4.94M  1.72M
+    sdo         -      -    156     24  4.53M  1.72M
+    sdp         -      -    154     24  4.46M  1.72M
+    sdq         -      -    170     24  4.95M  1.72M
+cache           -      -      -      -      -      -
+  sdb        103G   176G      4      7  19.5K   667K
+----------  -----  -----  -----  -----  -----  -----
+
+               capacity     operations    bandwidth
+pool        alloc   free   read  write   read  write
+----------  -----  -----  -----  -----  -----  -----
+local        245G  33.1G      0     20    102   152K
+  sdd        245G  33.1G      0     20    102   152K
+logs            -      -      -      -      -      -
+  mirror     256K  14.6G      0      0      0      0
+    sdr         -      -      0      0      0      0
+    sds         -      -      0      0      0      0
+cache           -      -      -      -      -      -
+  sde       1.39G   277G      0      0    102      0
+----------  -----  -----  -----  -----  -----  -----
+tank        20.5T  1.30T      0     32      0  84.3K
+  raidz2    10.2T   665G      0     21      0  55.0K
+    sdf         -      -      0     10      0  15.9K
+    sdg         -      -      0     11      0  18.0K
+    sdh         -      -      0     11      0  17.8K
+    sdi         -      -      0     10      0  17.9K
+    sdj         -      -      0     10      0  17.0K
+    sdk         -      -      0      9      0  15.4K
+  raidz2    10.2T   664G      0     11      0  29.3K
+    sdl         -      -      0      6      0  9.80K
+    sdm         -      -      0      7      0  9.40K
+    sdn         -      -      0      6      0  10.0K
+    sdo         -      -      0      6      0  8.50K
+    sdp         -      -      0      6      0  7.70K
+    sdq         -      -      0      7      0  10.0K
+cache           -      -      -      -      -      -
+  sdb        103G   176G      0      0      0      0
+----------  -----  -----  -----  -----  -----  -----
+
+               capacity     operations    bandwidth
+pool        alloc   free   read  write   read  write
+----------  -----  -----  -----  -----  -----  -----
+local        245G  33.1G      0     22      0   180K
+  sdd        245G  33.1G      0     22      0   180K
+logs            -      -      -      -      -      -
+  mirror     256K  14.6G      0      0      0      0
+    sdr         -      -      0      0      0      0
+    sds         -      -      0      0      0      0
+cache           -      -      -      -      -      -
+  sde       1.39G   277G      0      0      0      0
+----------  -----  -----  -----  -----  -----  -----
+tank        20.5T  1.30T      1      0  27.6K      0
+  raidz2    10.2T   665G      0      0      0      0
+    sdf         -      -      0      0      0      0
+    sdg         -      -      0      0      0      0
+    sdh         -      -      0      0      0      0
+    sdi         -      -      0      0      0      0
+    sdj         -      -      0      0      0      0
+    sdk         -      -      0      0      0      0
+  raidz2    10.2T   664G      1      0  27.6K      0
+    sdl         -      -      1      0  7.00K      0
+    sdm         -      -      0      0  3.20K      0
+    sdn         -      -      0      0  3.00K      0
+    sdo         -      -      1      0  6.80K      0
+    sdp         -      -      0      0  3.80K      0
+    sdq         -      -      0      0  3.80K      0
+cache           -      -      -      -      -      -
+  sdb        103G   176G      0      0      0      0
+----------  -----  -----  -----  -----  -----  -----
+
+               capacity     operations    bandwidth
+pool        alloc   free   read  write   read  write
+----------  -----  -----  -----  -----  -----  -----
+local        245G  33.1G      0     18      0   196K
+  sdd        245G  33.1G      0     18      0   196K
+logs            -      -      -      -      -      -
+  mirror     256K  14.6G      0      0      0      0
+    sdr         -      -      0      0      0      0
+    sds         -      -      0      0      0      0
+cache           -      -      -      -      -      -
+  sde       1.39G   277G      0      0      0      0
+----------  -----  -----  -----  -----  -----  -----
+tank        20.5T  1.30T      0     38      0   121K
+  raidz2    10.2T   665G      0     24      0  82.1K
+    sdf         -      -      0     12      0  24.1K
+    sdg         -      -      0     12      0  24.7K
+    sdh         -      -      0     12      0  23.1K
+    sdi         -      -      0     12      0  23.7K
+    sdj         -      -      0     12      0  24.8K
+    sdk         -      -      0     12      0  23.8K
+  raidz2    10.2T   664G      0     13      0  38.7K
+    sdl         -      -      0      7      0  12.0K
+    sdm         -      -      0      7      0  11.0K
+    sdn         -      -      0      8      0  12.7K
+    sdo         -      -      0      7      0  11.5K
+    sdp         -      -      0      7      0  11.0K
+    sdq         -      -      0      7      0  12.7K
+cache           -      -      -      -      -      -
+  sdb        103G   176G      0      0      0      0
+----------  -----  -----  -----  -----  -----  -----
+
+               capacity     operations    bandwidth
+pool        alloc   free   read  write   read  write
+----------  -----  -----  -----  -----  -----  -----
+local        245G  33.1G      0     24      0   177K
+  sdd        245G  33.1G      0     24      0   177K
+logs            -      -      -      -      -      -
+  mirror     256K  14.6G      0      0      0      0
+    sdr         -      -      0      0      0      0
+    sds         -      -      0      0      0      0
+cache           -      -      -      -      -      -
+  sde       1.39G   277G      0      0      0      0
+----------  -----  -----  -----  -----  -----  -----
+tank        20.5T  1.30T      0      0      0      0
+  raidz2    10.2T   665G      0      0      0      0
+    sdf         -      -      0      0      0      0
+    sdg         -      -      0      0      0      0
+    sdh         -      -      0      0      0      0
+    sdi         -      -      0      0      0      0
+    sdj         -      -      0      0      0      0
+    sdk         -      -      0      0      0      0
+  raidz2    10.2T   664G      0      0      0      0
+    sdl         -      -      0      0      0      0
+    sdm         -      -      0      0      0      0
+    sdn         -      -      0      0      0      0
+    sdo         -      -      0      0      0      0
+    sdp         -      -      0      0      0      0
+    sdq         -      -      0      0      0      0
+cache           -      -      -      -      -      -
+  sdb        103G   176G      0      0      0      0
+----------  -----  -----  -----  -----  -----  -----
+
+               capacity     operations    bandwidth
+pool        alloc   free   read  write   read  write
+----------  -----  -----  -----  -----  -----  -----
+local        245G  33.1G      0     27      0   234K
+  sdd        245G  33.1G      0     27      0   234K
+logs            -      -      -      -      -      -
+  mirror     256K  14.6G      0      0      0      0
+    sdr         -      -      0      0      0      0
+    sds         -      -      0      0      0      0
+cache           -      -      -      -      -      -
+  sde       1.39G   277G      0      0      0      0
+----------  -----  -----  -----  -----  -----  -----
+tank        20.5T  1.30T      0      0      0      0
+  raidz2    10.2T   665G      0      0      0      0
+    sdf         -      -      0      0      0      0
+    sdg         -      -      0      0      0      0
+    sdh         -      -      0      0      0      0
+    sdi         -      -      0      0      0      0
+    sdj         -      -      0      0      0      0
+    sdk         -      -      0      0      0      0
+  raidz2    10.2T   664G      0      0      0      0
+    sdl         -      -      0      0      0      0
+    sdm         -      -      0      0      0      0
+    sdn         -      -      0      0      0      0
+    sdo         -      -      0      0      0      0
+    sdp         -      -      0      0      0      0
+    sdq         -      -      0      0      0      0
+cache           -      -      -      -      -      -
+  sdb        103G   176G      0      0      0      0
+----------  -----  -----  -----  -----  -----  -----
+

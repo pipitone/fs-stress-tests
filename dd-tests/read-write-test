@@ -1,0 +1,49 @@
+#!/bin/bash
+#
+# Runs read-only, write-only, and combined read/write tests using dd
+# 
+dir=/tank/test    # target directory to use for read/writing 
+j=4               # number of processes to run in parallel
+bs=1              # block size in multiples of 1024 bytes
+filesize=16       # total read/write size in gigabytes
+
+count=$(($filesize*1024*1024/$bs))   # number of blocks sized $bs to read/write
+desc="j=$j-bs=$bs-count=$count"
+parallel=/usr/bin/parallel
+
+echo "# ------------------------------------------------------"
+test_desc="baseline.$desc"
+(
+echo "# recording baseline activity - $(date) - $desc"
+iostat -dxk 5 6 > $test_desc.iostat.log &
+sudo zpool iostat -v 5 6 > $test_desc.zpool-iostat.log &
+wait 
+) 2>&1 | tee $test_desc.log
+
+test_desc="write-only.$desc"
+(
+echo "# begin write tests... $j parallel streams - $(date) - $desc"
+$parallel --gnu -j$j --tag dd of=$dir/dump.{} if=/dev/zero bs=${bs}K count=$count ::: $(seq 1 $j) &
+iostat -dxk 5 6 > $test_desc.iostat.log &
+sudo zpool iostat -v 5 6 > $test_desc.zpool-iostat.log &
+wait 
+) 2>&1 | tee $test_desc.log
+
+test_desc="read-only.$desc"
+(
+echo "# begin read tests... $j parallel streams - $(date) - $desc"
+$parallel --gnu -j$j --tag dd if=$dir/dump.{} of=/dev/zero bs=${bs}K ::: $(seq 1 $j) &
+iostat -dxk 5 6 > $test_desc.iostat.log &
+sudo zpool iostat -v 5 6 > $test_desc.zpool-iostat.log &
+wait
+) 2>&1 | tee $test_desc.log
+
+test_desc="read-write.$desc"
+(
+echo "# read/write tests... $j parallel streams each - $(date) - $desc"
+$parallel --gnu -j$j --tag dd of=$dir/write.{1} if=/dev/zero bs=${bs}K count=$count ::: $(seq 1 $j) ::: write &
+$parallel --gnu -j$j --tag dd if=$dir/dump.{1} of=/dev/zero bs=${bs}K count=$count ::: $(seq 1 $j) ::: read &
+iostat -dxk 5 6 > $test_desc.iostat.log &
+sudo zpool iostat -v 5 6 > $test_desc.zpool-iostat.log &
+wait
+) 2>&1 | tee $test_desc.log
